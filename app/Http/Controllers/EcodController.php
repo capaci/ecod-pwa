@@ -15,10 +15,11 @@ class EcodController extends Controller
 
     public function update(Request $request) {
         $data = $request->all();
-        dd($data);
-        $user = new User($data);
-        $user->save();
+        $result = User::find(1)->update($data);
+//
+//        $user = new User($data);
+//        $user->save();
 
-        return redirect()->route('/')->with('data', $data);
+        return redirect('/');
     }
 }

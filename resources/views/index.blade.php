@@ -33,47 +33,47 @@
                 <div class="row">
                     <div class="col s12">
                         <div class="input-field col s12">
-                            <input name="name" id="complete_name" type="text" class="validate">
-                            <label for="complete_name">{{ $name }}</label>
+                            <input name="name" id="complete_name" type="text" class="validate" value="{{ $name }}">
+                            <label for="complete_name">Nome Completo</label>
                         </div>
                     </div>
                     <div class="col s12 m7">
                         <div class="input-field col s12">
-                            <input name="birthday" type="date" class="datepicker validate">
-                            <label for="date">{{ $birthday }}</label>
+                            <input name="birthday" type="text" class="datepicker validate" value="{{ $birthday }}">
+                            <label for="date">Data de Nascimento</label>
                         </div>
                         <div class="input-field col s12">
-                            <input name="nationality" id="nacionalidade" type="text" class="validate">
-                            <label for="nacionalidade">{{ $nationality }}</label>
+                            <input name="nationality" id="nacionalidade" type="text" class="validate" value="{{ $nationality }}">
+                            <label for="nacionalidade">Nacionalidade</label>
                         </div>
                     </div>
                     <div class="col s12 m5">
                         <div class="gender-select input-field col s12">
                             <select name="gender" class="gender-select__button">
-                                <option value="" disabled selected>{{ $gender }}</option>
-                                <option value="female">Feminino</option>
-                                <option value="male">Masculino</option>
-                                <option value="custom">Personalizado</option>
+                                <option value="" disabled selected>selecione uma opção</option>
+                                <option value="female" {{ $gender === "female" ? "selected" : "" }}>Feminino</option>
+                                <option value="male" {{ $gender === "male" ? "selected" : "" }} >Masculino</option>
+                                <option value="custom" {{ $gender === "custom" ? "selected" : "" }}>Personalizado</option>
                             </select>
                             <label>Gênero</label>
                         </div>
-                        <div id="custom-gender" class="input-field col s12 hide">
-                            <input name="custom-gender" type="text" id="custom-gender__input" class="validate"/>
-                            <label for="custom-gender_input">{{ $custom_gender }}</label>
+                        <div id="custom_gender" class="input-field col s12 hide">
+                            <input name="custom_gender" type="text" id="custom-gender__input" class="validate" value="{{ $custom_gender }}"/>
+                            <label for="custom-gender_input">Genêro com a qual se identifica</label>
                             <a href="" class="close">x</a>
                         </div>
 
                         <div class="input-field col s12">
-                            <select name="blood-type">
-                                <option value="" disabled selected>{{ $blood_type }}</option>
-                                <option value="A+">A+</option>
-                                <option value="A-">A-</option>
-                                <option value="B+">B+</option>
-                                <option value="B-">B-</option>
-                                <option value="AB+">AB+</option>
-                                <option value="AB-">AB-</option>
-                                <option value="O+">O+</option>
-                                <option value="O-">O-</option>
+                            <select name="blood_type">
+                                <option value="" disabled selected>selecione uma opção</option>
+                                <option value="A+" {{ $blood_type === "A+" ? "selected" : "" }}>A+</option>
+                                <option value="A-" {{ $blood_type === "A-" ? "selected" : "" }}>A-</option>
+                                <option value="B+" {{ $blood_type === "B+" ? "selected" : "" }}>B+</option>
+                                <option value="B-" {{ $blood_type === "B-" ? "selected" : "" }}>B-</option>
+                                <option value="AB+" {{ $blood_type === "AB+" ? "selected" : "" }}>AB+</option>
+                                <option value="AB-" {{ $blood_type === "AB-" ? "selected" : "" }}>AB-</option>
+                                <option value="O+" {{ $blood_type === "O+" ? "selected" : "" }}>O+</option>
+                                <option value="O-" {{ $blood_type === "O-" ? "selected" : "" }}>O-</option>
                             </select>
                             <label>Tipo Sanguíneo</label>
                         </div>
@@ -93,7 +93,7 @@
                     <div class="col s12 m8">
                         <div class="input-field col s12">
                             <select name="allergies" multiple>
-                                <option value="" {{ $allergies }}></option>
+                                <option value="" disabled selected></option>
                                 <option value="acaros">Ácaros</option>
                                 <option value="fungos">Fungos</option>
                                 <option value="insetos">Insetos</option>
@@ -108,69 +108,36 @@
                         <div class="col s12">
                             <h5>Em caso de emergência, avisar:</h5>
                             <div class="input-field col s7">
-<<<<<<< HEAD
-                                <input name="nome-familiar1" type="text" id="nome-familiar1" class="validate"/>
-                                <label for="nome-familiar1">{{ $nome_familiar1 }}</label>
+                                <input name="nome_familiar1" type="text" id="nome-familiar1" class="validate" value="{{ $nome_familiar1 }}"/>
+                                <label for="nome-familiar1">Nome do Familiar 1</label>
                             </div>
                             <div class="input-field col s5">
-                                <input name="tel-familiar1" type="text" id="tel-familiar1" class="validate"/>
-                                <label for="tel-familiar1">{{ $tel_familiar1 }}</label>
+                                <input name="tel_familiar1" type="text" id="tel-familiar1" class="validate" value="{{ $tel_familiar1 }}"/>
+                                <label for="tel-familiar1">Telefone do Familiar 1</label>
                             </div>
                             <div class="input-field col s7">
-                                <input name="nome-familiar2" type="text" id="nome-familiar2" class="validate"/>
-                                <label for="nome-familiar2">{{ $nome_familiar2 }}</label>
+                                <input name="nome_familiar2" type="text" id="nome-familiar2" class="validate" value="{{ $nome_familiar2 }}"/>
+                                <label for="nome-familiar2">Nome do Familiar 2</label>
                             </div>
                             <div class="input-field col s5">
-                                <input name="tel-familiar2" type="text" id="tel-familiar2" class="validate"/>
-                                <label for="tel-familiar2">{{ $tel_familiar2 }}</label>
+                                <input name="tel_familiar2" type="text" id="tel-familiar2" class="validate" value="{{ $tel_familiar2 }}"/>
+                                <label for="tel-familiar2">Telefone do Familiar 2</label>
                             </div>
                             <div class="input-field col s7">
-                                <input name="nome-medico" type="text" id="nome-médico" class="validate"/>
-                                <label for="nome-medico">{{ $nome_medico }}</label>
+                                <input name="nome_medico" type="text" id="nome-medico" class="validate" value="{{ $nome_medico }}"/>
+                                <label for="nome-medico">Nome do Médico</label>
                             </div>
                             <div class="input-field col s5">
-                                <input name="tel-medico" type="text" id="tel-médico" class="validate"/>
-                                <label for="tel-medico">{{ $tel_medico }}</label>
+                                <input name="tel_medico" type="text" id="tel-medico" class="validate" value="{{ $tel_medico }}"/>
+                                <label for="tel-medico">Telefone do Médico</label>
                             </div>
                             <div class="input-field col s7">
-                                <input name="nome-plano" type="text" id="nome-plano" class="validate"/>
-                                <label for="nome-plano">{{ $nome_plano}}</label>
+                                <input name="nome_plano" type="text" id="nome-plano" class="validate" value="{{ $nome_plano }}"/>
+                                <label for="nome-plano">Plano de saúde</label>
                             </div>
                             <div class="input-field col s5">
-                                <input name="tel-plano" type="text" id="tel-plano" class="validate"/>
-                                <label for="tel-plano">{{ $tel_plano }}</label>
-=======
-                                <input name="nome_familiar1" type="text" id="nome_familiar1" class="validate"/>
-                                <label for="nome_familiar1">Nome do Familiar 1</label>
-                            </div>
-                            <div class="input-field col s5">
-                                <input name="tel_familiar1" type="text" id="tel_familiar1" class="validate"/>
-                                <label for="tel_familiar1">Telefone do Familiar 1</label>
-                            </div>
-                            <div class="input-field col s7">
-                                <input name="nome_familiar2" type="text" id="nome_familiar2" class="validate"/>
-                                <label for="nome_familiar2">Nome do Familiar 2</label>
-                            </div>
-                            <div class="input-field col s5">
-                                <input name="tel_familiar2" type="text" id="tel_familiar2" class="validate"/>
-                                <label for="tel_familiar2">Telefone do Familiar 2</label>
-                            </div>
-                            <div class="input-field col s7">
-                                <input name="nome_medico" type="text" id="nome_medico" class="validate"/>
-                                <label for="nome_medico">Nome do Médico</label>
-                            </div>
-                            <div class="input-field col s5">
-                                <input name="tel_medico" type="text" id="tel_medico" class="validate"/>
-                                <label for="tel_medico">Telefone do Familiar 2</label>
-                            </div>
-                            <div class="input-field col s7">
-                                <input name="nome_plano" type="text" id="nome_plano" class="validate"/>
-                                <label for="nome_plano">Plano de saúde</label>
-                            </div>
-                            <div class="input-field col s5">
-                                <input name="tel_plano" type="text" id="tel_plano" class="validate"/>
-                                <label for="tel_plano">Telefone do Plano</label>
->>>>>>> ac5ba56a1a8bc5b86cea17cba35f5e73f5bf68b4
+                                <input name="tel_plano" type="text" id="tel-plano" class="validate" value="{{ $tel_plano }}"/>
+                                <label for="tel-plano">Telefone do Plano</label>
                             </div>
                         </div>
                     </div>
@@ -188,22 +155,26 @@
                             <div class="row">
                                 <div class="col s6">
                                     <p>
-                                        <input name="tabagismo" type="checkbox" id="tabagismo" />
+                                        <input name='tabagismo' type='hidden' value='off' >
+                                        <input name="tabagismo" type="checkbox" id="tabagismo" {{ $tabagismo === "on" ? "checked" : "" }} />
                                         <label for="tabagismo">Tabagismo</label>
                                     </p>
                                     <p>
-                                        <input name="sedentarismo" type="checkbox" id="sedentarismo" />
+                                        <input name='sedentarismo' type='hidden' value='off' >
+                                        <input name="sedentarismo" type="checkbox" id="sedentarismo" {{ $sedentarismo === "on" ? "checked" : "" }} />
                                         <label for="sedentarismo">Sedentarismo</label>
                                     </p>
                                 </div>
                                 <div class="col s6">
                                     <p>
-                                        <input name="etilismo" type="checkbox" id="etilismo" />
+                                        <input name='etilismo' type='hidden' value='off' >
+                                        <input name="etilismo" type="checkbox" id="etilismo" {{ $etilismo === "on" ? "checked" : "" }} />
                                         <label for="etilismo">Etilismo</label>
                                     </p>
                                     <p>
-                                        <input name="atividade_fisica" type="checkbox" id="atividade_fisica" />
-                                        <label for="atividade_fisica">Prática de atividades físicas</label>
+                                        <input name='atividade_fisica' type='hidden' value='off' >
+                                        <input name="atividade_fisica" type="checkbox" id="atividade-fisica" {{ $atividade_fisica === "on" ? "checked" : "" }} />
+                                        <label for="atividade-fisica">Prática de atividades físicas</label>
                                     </p>
                                 </div>
                             </div>
@@ -214,29 +185,35 @@
                             <div class="row">
                                 <div class="col s6">
                                     <p>
-                                        <input name="musculoesqueletica" type="checkbox" id="musculoesqueletica"/>
+                                        <input name='musculoesqueletica' type='hidden' value='off' >
+                                        <input name="musculoesqueletica" type="checkbox" id="musculoesqueletica" {{ $musculoesqueletica === "on" ? "checked" : "" }} />
                                         <label for="musculoesqueletica">Musculoesquelética</label>
                                     </p>
                                     <p>
-                                        <input name="cardiovascular" type="checkbox" id="cardiovascular"/>
+                                        <input name='cardiovascular' type='hidden' value='off' >
+                                        <input name="cardiovascular" type="checkbox" id="cardiovascular" {{ $cardiovascular === "on" ? "checked" : "" }}/>
                                         <label for="cardiovascular">Cardiovascular</label>
                                     </p>
                                     <p>
-                                        <input name="uroginecologia" type="checkbox" id="uroginecologia"/>
+                                        <input name='uroginecologia' type='hidden' value='off' >
+                                        <input name="uroginecologia" type="checkbox" id="uroginecologia" {{ $uroginecologia === "on" ? "checked" : "" }}/>
                                         <label for="uroginecologia">Uroginecologia</label>
                                     </p>
                                 </div>
                                 <div class="col s6">
                                     <p>
-                                        <input name="neurologia" type="checkbox" id="neurologia" />
+                                        <input name='neurologia' type='hidden' value='off' >
+                                        <input name="neurologia" type="checkbox" id="neurologia" {{ $neurologia === "on" ? "checked" : "" }}/>
                                         <label for="neurologia">Neurológica</label>
                                     </p>
                                     <p>
-                                        <input name="cardio" type="checkbox" id="cardio" />
+                                        <input name='cardio' type='hidden' value='off' >
+                                        <input name="cardio" type="checkbox" id="cardio" {{ $cardio === "on" ? "checked" : "" }}/>
                                         <label for="cardio">Cardiorrespiratória</label>
                                     </p>
                                     <p>
-                                        <input name="outras" type="checkbox" id="outras" />
+                                        <input name='outras' type='hidden' value='off' >
+                                        <input name="outras" type="checkbox" id="outras" {{ $outras === "on" ? "checked" : "" }} />
                                         <label for="outras">Outras</label>
                                     </p>
                                 </div>
@@ -248,29 +225,35 @@
                             <div class="row">
                                 <div class="col s6">
                                     <p>
-                                        <input name="hipertensao" type="checkbox" id="hipertensao"/>
+                                        <input name='hipertensao' type='hidden' value='off' >
+                                        <input name="hipertensao" type="checkbox" id="hipertensao" {{ $hipertensao === "on" ? "checked" : "" }}/>
                                         <label for="hipertensao">Hipertensão</label>
                                     </p>
                                     <p>
-                                        <input name="diabetes" type="checkbox" id="diabetes"/>
+                                        <input name='diabetes' type='hidden' value='off' >
+                                        <input name="diabetes" type="checkbox" id="diabetes" {{ $diabetes === "on" ? "checked" : "" }}/>
                                         <label for="diabetes">Diabetes</label>
                                     </p>
                                     <p>
-                                        <input name="CA" type="checkbox" id="CA"/>
+                                        <input name='CA' type='hidden' value='off' >
+                                        <input name="CA" type="checkbox" id="CA" {{ $CA === "on" ? "checked" : "" }}/>
                                         <label for="CA">CA</label>
                                     </p>
                                 </div>
                                 <div class="col s6">
                                     <p>
-                                        <input name="degenerativas" type="checkbox" id="degenerativas"/>
+                                        <input name='degenerativas' type='hidden' value='off' >
+                                        <input name="degenerativas" type="checkbox" id="degenerativas" {{ $degenerativas === "on" ? "checked" : "" }}/>
                                         <label for="degenerativas">Doenças degenerativas</label>
                                     </p>
                                     <p>
-                                        <input name="vasculares" type="checkbox" id="vasculares"/>
+                                        <input name='vasculares' type='hidden' value='off' >
+                                        <input name="vasculares" type="checkbox" id="vasculares" {{ $vasculares === "on" ? "checked" : "" }}/>
                                         <label for="vasculares">Doenças Vasculares </label>
                                     </p>
                                     <p>
-                                        <input name="neurologicas" type="checkbox" id="neurologicas"/>
+                                        <input type='hidden' value='off' name='neurologicas'>
+                                        <input name="neurologicas" type="checkbox" id="neurologicas" {{ $neurologicas === "on" ? "checked" : "" }}/>
                                         <label for="neurologicas">Doenças Neurológicas</label>
                                     </p>
                                 </div>
