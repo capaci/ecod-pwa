@@ -34,23 +34,23 @@
                     <div class="col s12">
                         <div class="input-field col s12">
                             <input name="name" id="complete_name" type="text" class="validate">
-                            <label for="complete_name">Nome Completo</label>
+                            <label for="complete_name">{{ $name }}</label>
                         </div>
                     </div>
                     <div class="col s12 m7">
                         <div class="input-field col s12">
                             <input name="birthday" type="date" class="datepicker validate">
-                            <label for="date">Data de Nascimento</label>
+                            <label for="date">{{ $birthday }}</label>
                         </div>
                         <div class="input-field col s12">
                             <input name="nationality" id="nacionalidade" type="text" class="validate">
-                            <label for="nacionalidade">Nacionalidade</label>
+                            <label for="nacionalidade">{{ $nationality }}</label>
                         </div>
                     </div>
                     <div class="col s12 m5">
                         <div class="gender-select input-field col s12">
                             <select name="gender" class="gender-select__button">
-                                <option value="" disabled selected>selecione uma opção</option>
+                                <option value="" disabled selected>{{ $gender }}</option>
                                 <option value="female">Feminino</option>
                                 <option value="male">Masculino</option>
                                 <option value="custom">Personalizado</option>
@@ -59,13 +59,13 @@
                         </div>
                         <div id="custom-gender" class="input-field col s12 hide">
                             <input name="custom-gender" type="text" id="custom-gender__input" class="validate"/>
-                            <label for="custom-gender_input">Genêro com a qual se identifica</label>
+                            <label for="custom-gender_input">{{ $custom_gender }}</label>
                             <a href="" class="close">x</a>
                         </div>
 
                         <div class="input-field col s12">
                             <select name="blood-type">
-                                <option value="" disabled selected>selecione uma opção</option>
+                                <option value="" disabled selected>{{ $blood_type }}</option>
                                 <option value="A+">A+</option>
                                 <option value="A-">A-</option>
                                 <option value="B+">B+</option>
