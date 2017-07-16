@@ -64,3 +64,8 @@ img { display: block; }
 .anamnese .anamnese__group {
     padding: 10px 20px;
 }
+
+.section-title {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
