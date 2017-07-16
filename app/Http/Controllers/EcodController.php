@@ -10,8 +10,7 @@ class EcodController extends Controller
         return view('index');
     }
 
-    public function editUser(Request $request) {
-
-
+    public function update(Request $request) {
+        dd($request->all());
     }
 }

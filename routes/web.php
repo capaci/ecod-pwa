@@ -15,9 +15,11 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/doctor', 'SurveyController@index')->name('survey');
-Route::post('/edit', 'SurveyController@calculate');
-Route::get('/result', 'SurveyController@result')->name('result');
+Route::post('/updateUser', 'EcodController@update');
+
+Route::get('/doctor', 'EcodController@index')->name('survey');
+
+Route::get('/result', 'EcodController@result')->name('result');
 
 
 
