@@ -93,7 +93,7 @@
                     <div class="col s12 m8">
                         <div class="input-field col s12">
                             <select name="allergies" multiple>
-                                <option value="" disabled selected></option>
+                                <option value="" {{ $allergies }}></option>
                                 <option value="acaros">Ácaros</option>
                                 <option value="fungos">Fungos</option>
                                 <option value="insetos">Insetos</option>
@@ -109,35 +109,35 @@
                             <h5>Em caso de emergência, avisar:</h5>
                             <div class="input-field col s7">
                                 <input name="nome-familiar1" type="text" id="nome-familiar1" class="validate"/>
-                                <label for="nome-familiar1">Nome do Familiar 1</label>
+                                <label for="nome-familiar1">{{ $nome_familiar1 }}</label>
                             </div>
                             <div class="input-field col s5">
                                 <input name="tel-familiar1" type="text" id="tel-familiar1" class="validate"/>
-                                <label for="tel-familiar1">Telefone do Familiar 1</label>
+                                <label for="tel-familiar1">{{ $tel_familiar1 }}</label>
                             </div>
                             <div class="input-field col s7">
                                 <input name="nome-familiar2" type="text" id="nome-familiar2" class="validate"/>
-                                <label for="nome-familiar2">Nome do Familiar 2</label>
+                                <label for="nome-familiar2">{{ $nome_familiar2 }}</label>
                             </div>
                             <div class="input-field col s5">
                                 <input name="tel-familiar2" type="text" id="tel-familiar2" class="validate"/>
-                                <label for="tel-familiar2">Telefone do Familiar 2</label>
+                                <label for="tel-familiar2">{{ $tel_familiar2 }}</label>
                             </div>
                             <div class="input-field col s7">
                                 <input name="nome-medico" type="text" id="nome-médico" class="validate"/>
-                                <label for="nome-medico">Nome do Médico</label>
+                                <label for="nome-medico">{{ $nome_medico }}</label>
                             </div>
                             <div class="input-field col s5">
                                 <input name="tel-medico" type="text" id="tel-médico" class="validate"/>
-                                <label for="tel-medico">Telefone do Familiar 2</label>
+                                <label for="tel-medico">{{ $tel_medico }}</label>
                             </div>
                             <div class="input-field col s7">
                                 <input name="nome-plano" type="text" id="nome-plano" class="validate"/>
-                                <label for="nome-plano">Plano de saúde</label>
+                                <label for="nome-plano">{{ $nome_plano}}</label>
                             </div>
                             <div class="input-field col s5">
                                 <input name="tel-plano" type="text" id="tel-plano" class="validate"/>
-                                <label for="tel-plano">Telefone do Plano</label>
+                                <label for="tel-plano">{{ $tel_plano }}</label>
                             </div>
                         </div>
                     </div>
