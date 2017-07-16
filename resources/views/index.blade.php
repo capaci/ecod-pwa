@@ -108,6 +108,7 @@
                         <div class="col s12">
                             <h5>Em caso de emergência, avisar:</h5>
                             <div class="input-field col s7">
+<<<<<<< HEAD
                                 <input name="nome-familiar1" type="text" id="nome-familiar1" class="validate"/>
                                 <label for="nome-familiar1">{{ $nome_familiar1 }}</label>
                             </div>
@@ -138,6 +139,38 @@
                             <div class="input-field col s5">
                                 <input name="tel-plano" type="text" id="tel-plano" class="validate"/>
                                 <label for="tel-plano">{{ $tel_plano }}</label>
+=======
+                                <input name="nome_familiar1" type="text" id="nome_familiar1" class="validate"/>
+                                <label for="nome_familiar1">Nome do Familiar 1</label>
+                            </div>
+                            <div class="input-field col s5">
+                                <input name="tel_familiar1" type="text" id="tel_familiar1" class="validate"/>
+                                <label for="tel_familiar1">Telefone do Familiar 1</label>
+                            </div>
+                            <div class="input-field col s7">
+                                <input name="nome_familiar2" type="text" id="nome_familiar2" class="validate"/>
+                                <label for="nome_familiar2">Nome do Familiar 2</label>
+                            </div>
+                            <div class="input-field col s5">
+                                <input name="tel_familiar2" type="text" id="tel_familiar2" class="validate"/>
+                                <label for="tel_familiar2">Telefone do Familiar 2</label>
+                            </div>
+                            <div class="input-field col s7">
+                                <input name="nome_medico" type="text" id="nome_medico" class="validate"/>
+                                <label for="nome_medico">Nome do Médico</label>
+                            </div>
+                            <div class="input-field col s5">
+                                <input name="tel_medico" type="text" id="tel_medico" class="validate"/>
+                                <label for="tel_medico">Telefone do Familiar 2</label>
+                            </div>
+                            <div class="input-field col s7">
+                                <input name="nome_plano" type="text" id="nome_plano" class="validate"/>
+                                <label for="nome_plano">Plano de saúde</label>
+                            </div>
+                            <div class="input-field col s5">
+                                <input name="tel_plano" type="text" id="tel_plano" class="validate"/>
+                                <label for="tel_plano">Telefone do Plano</label>
+>>>>>>> ac5ba56a1a8bc5b86cea17cba35f5e73f5bf68b4
                             </div>
                         </div>
                     </div>
@@ -169,8 +202,8 @@
                                         <label for="etilismo">Etilismo</label>
                                     </p>
                                     <p>
-                                        <input name="atividade-fisica" type="checkbox" id="atividade-fisica" />
-                                        <label for="atividade-fisica">Prática de atividades físicas</label>
+                                        <input name="atividade_fisica" type="checkbox" id="atividade_fisica" />
+                                        <label for="atividade_fisica">Prática de atividades físicas</label>
                                     </p>
                                 </div>
                             </div>
