@@ -1,0 +1,26 @@
+.profile-img {
+    display: block;
+    max-width: 100%;
+}
+
+/* cor do modal datePicker */
+.picker__date-display {
+  background-color: #D50000;
+}
+.picker__weekday-display {
+  background-color: #D50000;
+}
+.picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected {
+  background-color: #D50000;
+}
+
+/* botao para fechar input de genero personalizado */
+#custom-gender {
+    position: relative;
+}
+
+#custom-gender .close {
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
