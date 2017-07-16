@@ -23,4 +23,7 @@ $(document).ready(function() {
         $('#custom-gender').addClass('hide');
         $('.gender-select').removeClass('hide');
     });
+
+    // $('ul.tabs').tabs({'select_tab': 'tab_id', 'swipeable': true});
+
 });

@@ -1,6 +1,9 @@
-.profile-img {
-    display: block;
-    max-width: 100%;
+body {
+    padding-bottom: 50px;
+}
+
+.main-container {
+    padding-top: 20px;
 }
 
 /* cor do modal datePicker */
@@ -23,4 +26,9 @@
     position: absolute;
     right: 10px;
     top: 0;
+}
+
+/* hack corrigir carousel */
+.tab-menu {
+    margin-bottom: 20px;
 }

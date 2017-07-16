@@ -12,8 +12,6 @@
 </head>
 
 <body>
-
-
     <header>
         <nav>
             <div class="nav-wrapper red accent-4">
@@ -22,104 +20,143 @@
         </nav>
     </header>
 
-    <main class="container">
+    <main class="container main-container">
+        <form>
+            <div class="row">
+                <div class="col m3">
+                    <div class="col-content">
+                        <img src="assets/img/profile.jpg" class="responsive-img">
+                    </div>
+                </div>
+                <div class="col m9">
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="input-field col s12">
+                                <input id="complete_name" type="text" class="validate">
+                                <label for="complete_name">Nome Completo</label>
+                            </div>
+                        </div>
+                        <div class="col s12 m7">
+                            <div class="input-field col s12">
+                                <input type="date" class="datepicker validate">
+                                <label for="date">Data de Nascimento</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input id="nacionalidade" type="text" class="validate">
+                                <label for="nacionalidade">Nacionalidade</label>
+                            </div>
+                        </div>
+                        <div class="col s12 m5">
+                            <div class="gender-select input-field col s12">
+                                <select class="gender-select__button">
+                                    <option value="" disabled selected>selecione uma opção</option>
+                                    <option value="female">Feminino</option>
+                                    <option value="male">Masculino</option>
+                                    <option value="custom">Personalizado</option>
+                                </select>
+                                <label>Gênero</label>
+                            </div>
+                            <div id="custom-gender" class="input-field col s12 hide">
+                                <input name="gender" type="text" id="custom-gender__input" class="validate"/>
+                                <label for="custom-gender_input">Genêro com a qual se identifica</label>
+                                <a href="" class="close">x</a>
+                            </div>
 
-        <div class="row">
-            <div class="col m3">
-                <div class="col-content">
-                    <img src="https://s-media-cache-ak0.pinimg.com/564x/b9/47/08/b94708eca3ad7156dc46837199cd9dc2.jpg" class="profile-img">
+                            <div class="input-field col s12">
+                                <select>
+                                    <option value="" disabled selected>selecione uma opção</option>
+                                    <option value="A+">A+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
+                                    <option value="O+">O+</option>
+                                    <option value="O-">O-</option>
+                                </select>
+                                <label>Tipo Sanguíneo</label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <form class="col m9">
-                <div class="row">
-                    <div class="col s12">
-                        <div class="input-field col s12">
-                            <input id="complete_name" type="text" class="validate">
-                            <label for="complete_name">Nome Completo</label>
-                        </div>
-                    </div>
-                    <div class="col m7">
-                        <div class="input-field col s12">
-                            <input type="date" class="datepicker validate">
-                            <label for="date">Data de Nascimento</label>
-                        </div>
-                        <div class="input-field col s12">
-                            <input id="nacionalidade" type="text" class="validate">
-                            <label for="nacionalidade">Nacionalidade</label>
-                        </div>
-                    </div>
-                    <div class="col m5">
-                        <div class="gender-select input-field col s12">
-                            <select class="gender-select__button">
-                                <option value="" disabled selected>selecione uma opção</option>
-                                <option value="female">Feminino</option>
-                                <option value="male">Masculino</option>
-                                <option value="custom">Personalizado</option>
-                            </select>
-                            <label>Gênero</label>                            
-                        </div>
-                        <div id="custom-gender" class="input-field col s12 hide">
-                            <input name="gender" type="text" id="custom-gender__input" class="validate"/>
-                            <label for="custom-gender_input">Genêro com a qual se identifica</label>
-                            <a href="" class="close">x</a>
-                        </div>
+            <div class="row">
+                <div class="col s12 tab-menu">
 
-                        <div class="input-field col s12">
-                            <select>
-                                <option value="" disabled selected>selecione uma opção</option>
-                                <option value="A+">A+</option>
-                                <option value="A-">A-</option>
-                                <option value="B+">B+</option>
-                                <option value="B-">B-</option>
-                                <option value="AB+">AB+</option>
-                                <option value="AB-">AB-</option>
-                                <option value="O+">O+</option>
-                                <option value="O-">O-</option>
-                            </select>
-                            <label>Tipo Sanguíneo</label>
+                    <ul id="tabs-swipe-demo" class="tabs">
+                        <li class="tab col s6"><a class="active" href="#prontuario-geral">Prontuário Geral</a></li>
+                        <li class="tab col s6"><a href="#historico-consultas">Histórico de Consultas</a></li>
+                    </ul>
+                </div>
+                <div id="prontuario-geral" class="col s12 ">
+                    <!-- <div class="row"> -->
+                        <div class="col s12 m8">
+                            <div class="input-field col s12">
+                                <select multiple>
+                                    <option value="" disabled selected></option>
+                                    <option value="acaros">Ácaros</option>
+                                    <option value="fungos">Fungos</option>
+                                    <option value="insetos">Insetos</option>
+                                    <option value="pelos de animais">Pelos de animais</option>
+                                    <option value="insetos">Insetos</option>
+                                    <option value="polens">Pólens</option>
+                                    <option value="alimentos">Alimentos</option>
+                                </select>
+                                <label>Possuo alergia a:</label>
+                            </div>
+
+                            <div class="col s12">
+                                <h4>Em caso de emergência, avisar:</h4>
+                                <div class="input-field col s7">
+                                    <input name="nome-familiar1" type="text" id="nome-familiar1" class="validate"/>
+                                    <label for="nome-familiar1">Nome do Familiar 1</label>
+                                </div>
+                                <div class="input-field col s5">
+                                    <input name="tel-familiar1" type="text" id="tel-familiar1" class="validate"/>
+                                    <label for="tel-familiar1">Telefone do Familiar 1</label>
+                                </div>
+                                <div class="input-field col s7">
+                                    <input name="nome-familiar2" type="text" id="nome-familiar2" class="validate"/>
+                                    <label for="nome-familiar2">Nome do Familiar 2</label>
+                                </div>
+                                <div class="input-field col s5">
+                                    <input name="tel-familiar2" type="text" id="tel-familiar2" class="validate"/>
+                                    <label for="tel-familiar2">Telefone do Familiar 2</label>
+                                </div>
+                                <div class="input-field col s7">
+                                    <input name="nome-médico" type="text" id="nome-médico" class="validate"/>
+                                    <label for="nome-médico">Nome do Médico</label>
+                                </div>
+                                <div class="input-field col s5">
+                                    <input name="tel-médico" type="text" id="tel-médico" class="validate"/>
+                                    <label for="tel-médico">Telefone do Familiar 2</label>
+                                </div>
+                                <div class="input-field col s7">
+                                    <input name="nome-plano" type="text" id="nome-plano" class="validate"/>
+                                    <label for="nome-plano">Plano de saúde</label>
+                                </div>
+                                <div class="input-field col s5">
+                                    <input name="tel-plano" type="text" id="tel-plano" class="validate"/>
+                                    <label for="tel-plano">Telefone do Plano</label>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input disabled value="I am not editable" id="disabled" type="text" class="validate">
-                        <label for="disabled">Disabled</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="password" type="password" class="validate">
-                        <label for="password">Password</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="email" type="email" class="validate">
-                        <label for="email">Email</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12">
-                        This is an inline input field:
-                        <div class="input-field inline">
-                            <input id="email" type="email" class="validate">
-                            <label for="email" data-error="wrong" data-success="right">Email</label>
+                        <div class="col s12 m4">
+                            <img class="responsive-img" src="assets/img/qrcode.png">
                         </div>
-                    </div>
+                    <!-- </div> -->
+
+                </div>
+                <div id="historico-consultas" class="col s12">
+
                 </div>
             </form>
-        </div>
 
+        </main>
 
-    </main>
-
-
-
-
-
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="assets/materialize/js/materialize.min.js"></script>
-    <script src="assets/js/main.js"></script>
-</body>
-</html>
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="assets/materialize/js/materialize.min.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+    </html>
