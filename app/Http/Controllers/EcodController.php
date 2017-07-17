@@ -13,6 +13,11 @@ class EcodController extends Controller
         return view('index',$user);
     }
 
+    public function doctor() {
+        $user = User::find(1);
+        return view('doctor',$user);
+    }
+
     public function update(Request $request) {
         $data = $request->all();
         $result = User::find(1)->update($data);

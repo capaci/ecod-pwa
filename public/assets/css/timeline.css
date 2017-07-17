@@ -19,6 +19,14 @@ section.timeline-outer {
     margin: 0 auto 0 150px;
 }
 
+@media screen and (max-width: 945px) {
+    section.timeline-outer {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+
 h1.header {
     font-size: 50px;
     line-height: 70px;

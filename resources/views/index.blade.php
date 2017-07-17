@@ -264,7 +264,7 @@
                             <h5>Cirurgias/internações</h5>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <textarea name="cirurgias" id="cirurgias" class="materialize-textarea"></textarea>
+                                    <textarea name="cirurgias" id="cirurgias" class="materialize-textarea">{{ $cirurgias }}</textarea>
                                     <label for="cirurgias">Descreva os procedimentos cirúrgicos ou internações pelos quais você passou</label>
                                 </div>
                             </div>
@@ -281,10 +281,10 @@
                         <div class="row">
                             <div class="col s12 m12 l12">
                                 <ul class="timeline">
-                                    <li class="event" data-date="2015/Present">
-                                        <h3>Management and Entreprenurship (MSc)</h3>
+                                    <li class="event" data-date="Junho de 2015">
+                                        <h3>Remoção de apêndice</h3>
                                         <p>
-                                            This September 2015 I will begin an MSc in Management and Entrepreneurship at University of Sussex, to broaden my knowledge and gain skills necessary for my future in business and management.
+                                            Na maioria dos casos, quando o diagnóstico foi dado antes da instalação de peritonite generalizada, a evolução é boa e, em poucos dias, o paciente estará recuperado. "Quando a cirurgia é feita antes de complicações como o rompimento do apêndice (e a disseminação da infecção), o paciente estará recuperado e sem seqüelas em torno de 15 dias, devendo apenas evitar esforços físicos maiores que podem prejudicar a cicatrização", afirma o médico da Unimed- BH.
                                         </p>
                                     </li>
                                     {{--<li class="event" data-date="2015/Present">--}}

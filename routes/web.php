@@ -15,9 +15,8 @@ Route::get('/', 'EcodController@index');
 
 Route::post('/updateUser', 'EcodController@update');
 
-Route::get('/doctor', 'EcodController@index')->name('survey');
+Route::get('/doctor', 'EcodController@doctor');
 
-Route::get('/result', 'EcodController@result')->name('result');
 
 
 
